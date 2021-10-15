@@ -1,22 +1,23 @@
 package com.ws.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
 @Table
-public class Products {
+public class Brand {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long idP;
     private String name;
-    private String status;
-    private LocalDate create_date;
 
-    @ManyToOne
-    private Brand brand;
+
+
 }

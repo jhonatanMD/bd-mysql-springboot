@@ -1,0 +1,1 @@
+INSERT INTO tqmzambe_clase_springboot.brand (idP,name) VALUES(1,'COCA-COLA');
