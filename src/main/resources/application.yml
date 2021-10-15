@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://170.249.205.58:3306/tqmzambe_clase_springboot
+    username: tqmzambe_jmd
+    password: jMallqui1
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
