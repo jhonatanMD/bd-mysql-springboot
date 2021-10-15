@@ -1,5 +1,6 @@
 package com.ws.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.time.LocalDate;
 @Data
 @Entity
 @Table
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class Products {
 
     @Id
@@ -17,6 +19,8 @@ public class Products {
     private String status;
     private LocalDate create_date;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY ,cascade = CascadeType.ALL)
+    @JoinColumn(name = "brand_id")
+    @JsonIgnoreProperties("product")
     private Brand brand;
 }
